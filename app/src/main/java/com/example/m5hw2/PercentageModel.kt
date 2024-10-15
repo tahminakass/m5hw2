@@ -1,6 +1,6 @@
 package com.example.m5hw2
 
-class PercentageModel (
+ data class PercentageModel (
     val fname: String,
     val sname: String,
     val percentage: Int,
