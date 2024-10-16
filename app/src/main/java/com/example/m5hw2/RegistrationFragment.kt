@@ -25,7 +25,6 @@ class RegistrationFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        findNavController().navigate(R.id.registrationFragment)
 
         binding.btnCalculate.setOnClickListener {
            val response =  RetrofitService.api.fetchPercentage(
