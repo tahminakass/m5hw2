@@ -9,6 +9,21 @@
         android:id="@+id/registrationFragment"
         android:name="com.example.m5hw2.RegistrationFragment"
         android:label="fragment_registration"
-        tools:layout="@layout/fragment_registration" />
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registrationFragment_to_loveResultFragment"
+            app:destination="@id/loveResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loveResultFragment"
+        android:name="com.example.m5hw2.LoveResultFragment"
+        android:label="fragment_love_result"
+        tools:layout="@layout/fragment_love_result" >
+
+    <argument
+        android:name="percentage"
+        app:argType="string" />
+
+    </fragment>
 
 </navigation>

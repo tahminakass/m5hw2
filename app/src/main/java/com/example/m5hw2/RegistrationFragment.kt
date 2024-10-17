@@ -6,15 +6,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.navigation.fragment.R
 import androidx.navigation.fragment.findNavController
 import com.example.m5hw2.databinding.FragmentRegistrationBinding
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class RegistrationFragment : Fragment() {
+class RegistrationFragment : Fragment(), RegistrationView {
 
     private val binding by lazy { FragmentRegistrationBinding.inflate(layoutInflater) }
+    private lateinit var presenter: RegistrationPresenter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,29 +29,32 @@ class RegistrationFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        presenter = RegistrationPresenter(this)
+
         binding.btnCalculate.setOnClickListener {
-           val response =  RetrofitService.api.fetchPercentage(
-                firstName = binding.etName.text.toString(),
-                host = "love-calculator.p.rapidapi.com",
-                key = "13db8c0c9fmsh0e8b65404615b3ap1035a5jsn85bfe5faab5c",
-                secondName = binding.etSecondName.text.toString()
-            ).enqueue(object : Callback<PercentageModel>{
-               override fun onResponse(
-                   call: Call<PercentageModel>,
-                   response: Response<PercentageModel>
-               ) {
-                   if (response.body() != null && response.isSuccessful) {
-                       Log.e("ololo", "success: code:${response.code()} body:${response.body()}")
-                   }
-               }
+            val firstName = binding.etName.text.toString()
+            val secondName = binding.etSecondName.text.toString()
 
-               override fun onFailure(call: Call<PercentageModel>, t: Throwable) {
-                   Log.e("ololo", "fail: code: ${t.localizedMessage}")
-               }
-
-           })
-
+            presenter.calculatePercentage(firstName, secondName)
         }
+    }
+
+    override fun showLoading() {
+        binding.btnCalculate.visibility = View.VISIBLE
+    }
+
+    override fun hideLoading() {
+        binding.btnCalculate.visibility = View.GONE
+    }
+
+    override fun showSuccessResult(result: PercentageModel) {
+        val action =  RegistrationFragmentDirections.actionRegistrationFragmentToLoveResultFragment(
+            result.percentage.toString())
+        findNavController().navigate(action)
+    }
+
+    override fun showError(errorMessage: String) {
+        Toast.makeText(requireContext(), errorMessage, Toast.LENGTH_LONG).show()
     }
 }
 
