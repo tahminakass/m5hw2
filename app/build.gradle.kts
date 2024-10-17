@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("androidx.navigation.safeargs")
 }
 
 android {
@@ -33,7 +34,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-}
+
+    buildFeatures.viewBinding = true
+
+    }
 
 dependencies {
 
@@ -56,5 +60,7 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
 
+    }
 
-}
+
+

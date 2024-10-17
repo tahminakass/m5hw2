@@ -5,12 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
-import com.example.m5hw2.databinding.FragmentFirstBinding
+import com.example.m5hw2.databinding.FragmentLoveResultBinding
 
-class FirstFragment : Fragment() {
+class LoveResultFragment : Fragment() {
 
-    private val binding by lazy { FragmentFirstBinding.inflate(layoutInflater) }
+    private val binding by lazy { FragmentLoveResultBinding.inflate(layoutInflater)}
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -21,5 +20,9 @@ class FirstFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val percentage = arguments?.getString("percentage") ?: "Нет данных"
+
+        binding.tvScore.text = "Ваша совместимость: $percentage%"
     }
 }
