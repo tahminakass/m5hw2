@@ -1,5 +1,8 @@
-package com.example.m5hw2
+package com.example.m5hw2.ui.fragments
 
+import com.example.m5hw2.model.PercentageModel
+import com.example.m5hw2.RegistrationView
+import com.example.m5hw2.services.RetrofitService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

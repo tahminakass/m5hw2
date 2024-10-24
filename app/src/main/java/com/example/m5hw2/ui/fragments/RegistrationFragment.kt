@@ -1,18 +1,15 @@
-package com.example.m5hw2
+package com.example.m5hw2.ui.fragments
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.navigation.fragment.R
 import androidx.navigation.fragment.findNavController
+import com.example.m5hw2.model.PercentageModel
+import com.example.m5hw2.RegistrationView
 import com.example.m5hw2.databinding.FragmentRegistrationBinding
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class RegistrationFragment : Fragment(), RegistrationView {
 
@@ -48,9 +45,11 @@ class RegistrationFragment : Fragment(), RegistrationView {
     }
 
     override fun showSuccessResult(result: PercentageModel) {
-        val action =  RegistrationFragmentDirections.actionRegistrationFragmentToLoveResultFragment(
-            result.percentage.toString())
-        findNavController().navigate(action)
+        //val action =
+           // com.example.m5hw2.RegistrationFragmentDirections.actionRegistrationFragmentToLoveResultFragment(
+               // result.percentage.toString()
+           // )
+       // findNavController().navigate(action)
     }
 
     override fun showError(errorMessage: String) {

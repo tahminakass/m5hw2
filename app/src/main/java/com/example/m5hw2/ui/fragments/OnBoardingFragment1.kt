@@ -1,16 +1,15 @@
-package com.example.m5hw2
+package com.example.m5hw2.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
-import com.example.m5hw2.databinding.FragmentFirstBinding
+import com.example.m5hw2.databinding.FragmentOnBoarding1Binding
 
-class FirstFragment : Fragment() {
+class OnBoardingFragment1 : Fragment() {
 
-    private val binding by lazy { FragmentFirstBinding.inflate(layoutInflater) }
+    private val binding by lazy { FragmentOnBoarding1Binding.inflate(layoutInflater) }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

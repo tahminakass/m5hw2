@@ -1,12 +1,10 @@
-package com.example.m5hw2.onboard
+package com.example.m5hw2.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.m5hw2.R
-import com.example.m5hw2.databinding.FragmentFirstBinding
 import com.example.m5hw2.databinding.FragmentOnBoarding3Binding
 
 class OnBoardingFragment3 : Fragment() {

@@ -1,6 +1,7 @@
-package com.example.m5hw2
+package com.example.m5hw2.services
 
 
+import com.example.m5hw2.model.PercentageModel
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Header

@@ -1,4 +1,4 @@
-package com.example.m5hw2.onboard
+package com.example.m5hw2.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

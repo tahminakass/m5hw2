@@ -1,5 +1,7 @@
 package com.example.m5hw2
 
+import com.example.m5hw2.model.PercentageModel
+
 interface RegistrationView {
 
     fun showLoading()

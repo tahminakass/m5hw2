@@ -1,4 +1,4 @@
-package com.example.m5hw2
+package com.example.m5hw2.services
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
