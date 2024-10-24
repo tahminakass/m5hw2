@@ -1,4 +1,4 @@
-package com.example.m5hw2.onboard
+package com.example.m5hw2.onboard.application
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

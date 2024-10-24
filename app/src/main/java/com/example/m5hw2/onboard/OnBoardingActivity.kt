@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.example.m5hw2.MainActivity
 import com.example.m5hw2.R
+import com.example.m5hw2.adapter.OnBoardPagerAdapter
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import dagger.hilt.android.AndroidEntryPoint
