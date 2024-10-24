@@ -45,11 +45,11 @@ class RegistrationFragment : Fragment(), RegistrationView {
     }
 
     override fun showSuccessResult(result: PercentageModel) {
-        //val action =
-           // com.example.m5hw2.RegistrationFragmentDirections.actionRegistrationFragmentToLoveResultFragment(
-               // result.percentage.toString()
-           // )
-       // findNavController().navigate(action)
+        val action =
+            com.example.m5hw2.RegistrationFragmentDirections.actionRegistrationFragmentToLoveResultFragment(
+                result.percentage.toString()
+            )
+        findNavController().navigate(action)
     }
 
     override fun showError(errorMessage: String) {

@@ -1,8 +1,8 @@
-package com.example.m5hw2
+package com.example.m5hw2.ui.fragments.onboard
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
-class MyApplication: Application() {
+class MyApplication : Application() {
 }

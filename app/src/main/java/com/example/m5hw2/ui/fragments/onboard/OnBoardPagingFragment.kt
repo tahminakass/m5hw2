@@ -20,12 +20,7 @@ class OnBoardPagingFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
         return binding.root
-    }
-
-    companion object {
-        const val ARG_ONBOARD_POSITION = "onBoard"
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -40,10 +35,17 @@ class OnBoardPagingFragment : Fragment() {
             }
 
             1 -> {
-                tvOnboard.text = ""
+                binding.ivOnboard.setImageResource(R.drawable.onboarding_2)
+                tvOnboard.text = "Cherishing love \n It is now no longer possible for you to cherish love"
             }
 
-            2 -> {}
+            2 -> {
+                binding.ivOnboard.setImageResource(R.drawable.onboarding_3)
+                tvOnboard.text = "Have a breakup? \n We have made the orrection for you \n don't worry \n Maybe someone is waiting for you"
+            }
         }
+    }
+    companion object {
+        const val ARG_ONBOARD_POSITION = "onBoard"
     }
 }

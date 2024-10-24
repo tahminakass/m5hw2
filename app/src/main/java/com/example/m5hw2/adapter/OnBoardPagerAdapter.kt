@@ -6,6 +6,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.m5hw2.R
 import com.example.m5hw2.ui.fragments.onboard.OnBoardFragment
 import com.example.m5hw2.ui.fragments.onboard.OnBoardPagingFragment
+import com.example.m5hw2.ui.fragments.onboard.OnBoardPagingFragment.Companion.ARG_ONBOARD_POSITION
 
 class OnBoardPagerAdapter(fragment: OnBoardFragment) : FragmentStateAdapter(fragment) {
     override fun getItemCount(): Int {
