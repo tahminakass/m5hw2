@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.m5hw2.R
-import com.example.m5hw2.ui.fragments.OnBoardingFragment
 import com.example.m5hw2.ui.fragments.onboard.OnBoardFragment
 import com.example.m5hw2.ui.fragments.onboard.OnBoardPagingFragment
 
